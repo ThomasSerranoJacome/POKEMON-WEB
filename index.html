@@ -3,16 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <title>Mi Pokédex</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <h1>Mi Pokédex</h1>
+  <h1>Acerca de Pokemones</h1>
 
-  <input type="text" id="input" placeholder="Escribe un pokémon...">
-  <button onclick="buscarPokemon()">Buscar</button>
+  <div class="filtros">
 
-  <div id="resultado"></div>
+    <div class="filtro">
+      <input type="text" id="input" placeholder="Nombre o número (ej: pikachu, 25)">
+      <button onclick="buscarPokemon()">Buscar</button>
+      <div id="resultado"></div>
+    </div>
+
+    <div class="filtro">
+      <select id="selectTipo">
+        <option value="">-- Selecciona un tipo --</option>
+      </select>
+      <button onclick="buscarPorTipo()">Buscar por tipo</button>
+      <div id="resultadoTipo"></div>
+    </div>
+
+    <div class="filtro">
+      <input type="text" id="inputEvo" placeholder="Nombre o número (ej: pikachu, 25)">
+      <button onclick="buscarEvolucion()">Ver evoluciones</button>
+      <div id="resultadoEvo"></div>
+    </div>
+
+  </div>
 
   <script src="script.js"></script>
 </body>
